@@ -1,23 +1,24 @@
-import { Moon, Sun } from 'lucide-react'
-import './App.css'
-import { Button } from './components/ui/button'
-import { useTheme } from './hooks/useTheme'
+import "./App.css";
+import Home from "./components/crypto-ui/Home";
+import Navbar from "./components/crypto-ui/Navbar";
 
 function App() {
-  const { theme, toggleTheme } = useTheme()
+  // const { theme, toggleTheme } = useTheme();
 
   return (
     <>
-      <Button
+      <Navbar />
+      <Home />
+      {/* <Button
         variant="outline"
         size="icon"
         onClick={toggleTheme}
-        title={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
+        title={`Switch to ${theme === "light" ? "dark" : "light"} theme`}
       >
-        {theme === 'light' ? <Moon /> : <Sun />}
-      </Button>
+        {theme === "light" ? <Moon /> : <Sun />}
+      </Button> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
