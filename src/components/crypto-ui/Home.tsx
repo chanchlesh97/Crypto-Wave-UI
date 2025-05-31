@@ -1,14 +1,11 @@
 import React from "react";
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+
 } from "../ui/card";
 import { Button } from "../ui/button";
 import AssetTable from "./AssetTable";
+import StockChart from "./StockChart";
 
 const Home = () => {
   const [category, setCategory] = React.useState("all");
@@ -54,16 +51,7 @@ const Home = () => {
         <AssetTable />
       </Card>
       <Card className="w-[50%]">
-        <CardHeader>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>Card Content</p>
-        </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
+        <StockChart />
       </Card>
     </div>
   );
